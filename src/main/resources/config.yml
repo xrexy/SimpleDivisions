@@ -1,0 +1,78 @@
+debug: true
+prefix: "&8[&c&lDivisions&8]"
+
+kill_xp: 5
+death_penalty: 10
+
+mysql:
+  username: "u343_2qQGtUU2ij"
+  password: "3lfCC2EVj.=ntqH+.MvEz0q."
+  database-name: s343_bgcraft
+  top-count: 10
+  top-timer: 3600 # seconds
+  server:
+    SSL: false
+    port: 3306
+    address: 87.121.82.37
+
+# placeholders: %prefix% %score% %division% %player%
+
+rewards:
+  gui:
+    title: "&0Rewards"
+    size: 54
+    filler: "STAINED_GLASS_PANE:15"
+    available: "STAINED_GLASS_PANE:5"
+    not-reached: "STAINED_GLASS_PANE:14"
+    claimed: "STAINED_GLASS_PANE:1"
+    filler-name: " "
+
+messages:
+  help:
+    - " "
+    - "    &f*  %prefix%  &f*"
+    - " "
+    - " &f- &c/dv give &7<player> <value>"
+    - " &f- &c/dv check &7<player>"
+    - " &f- &c/dv reset &7<player>"
+    - " &f- &c/dv updatetop"
+    - " &f- &c/dv rewards"
+    - " &f- &c/dv info"
+    - " &f- &c/dv top"
+    - " &f- &c/dv me"
+    - " "
+  top:
+    - "&8&l&m---&r &f&lTop &9&l10 &f&lPlayers &8&l&m---&r"
+    - " "
+  info:
+    - "&7&l&m-==&r &8[ &c&lDivisions Info&8 ] &7&l&m==-"
+    - "&f/dv me &8- &7показва колко точки имате и коя дивизия сте."
+    - "&f/dv check <player> &8- &7показва колко точки и коя дивизия е посоченият от Вас играч."
+    - "&f/dv rewards &8- &7награди, които може да вземете, когато сте съответната дивизия."
+    - "&f/dv top &8- &7за да видите ТОП 10 играчи.'"
+    - " "
+    - "&7Когато &fубиете &7играч, получавате &a5 &7точки, а когато &fумрете&7, губите &c10 &7точки."
+    - "&7Точки се губят, когато умрете на &fPvP."
+    - "&7Не се губят, когато умрете от &cлава&7, &9вода&7 и т.н"
+    - " "
+  top-player-format: "&r &8[&7%place%.&8] &f&l%username% &7&l- &f%score% points"
+  no-permission: "%prefix% &cНямате достъп до тази команда."
+  invalid-args: "%prefix% &cПроверете дали командата е изписана правилно!"
+  invalid-player: "%prefix% &cНе е намерен потребителя."
+  gui-error: "%prefix% &cGUI is not loaded correctly, please contact an admin"
+  unknown-division: ""
+  status-available: "&aИмате достъп до тази награда"
+  status-not-reached: "&cНямате достъп до тази награда"
+  status-claimed: "&eНаградата е вече взета"
+  updatetop: "%prefix% &aУспешно е обновен топ листът!"
+
+  rankup: "%prefix% &7Току-що покачихте дивизия: &r%division%"
+  rankdown: "%prefix% &7Току-що паднахте дивизия: &r%division%"
+  check: "%prefix% &f%target% &7е дивизия %division% с &a%score% &7точки."
+  me: "%prefix% &7Вие имате &a%score% &7точки и сте дивизия: &r%division%"
+  reset: "%prefix% &7Успешно изтрихте данните на &a%target%!"
+  give: # \/ Unique placeholders: %added%, %sender%
+    invalid-number: "%prefix% &7Моля въведете валидно число!"
+    msg: "%prefix% &7Успешно добавихте &a%added% &7точки към баланса на &a%target%&7. &8(%score% общо)"
+    notify-toggle: true
+    notify: "%prefix% &7Бяха добавени &a%added% &7точки към вашият баланс, сега сте дивизия: &e%division%"

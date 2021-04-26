@@ -1,0 +1,52 @@
+name: SimpleDivisions
+version: ${project.version}
+main: me.xrexy.simpledivisions.SimpleDivisions
+authors: [ xrexy ]
+
+commands:
+  division:
+    description: Main command of SimpleDivisions
+    usage: /<command>
+    aliases:
+      - dv
+
+permissions:
+  simpledivisions.*:
+    default: op
+    children:
+      - simpledivisions.use
+      - simpledivisions.me
+      - simpledivisions.check
+      - simpledivisions.give
+      - simpledivisions.reset
+      - simpledivisions.rewards
+      - simpledivisions.updatetop
+      - simpledivisions.top
+      - simpledivisions.info
+  simpledivisions.use:
+    description: Main command of SimpleDivisions
+    default: op
+  simpledivisions.me:
+    description: Me command of SimpleDivisions
+    default: op
+  simpledivisions.check:
+    description: Check command of SimpleDivisions
+    default: op
+  simpledivisions.give:
+    description: Give command of SimpleDivisions
+    default: op
+  simpledivisions.reset:
+    description: Reset command of SimpleDivisions
+    default: op
+  simpledivisions.rewards:
+    description: Rewards command of SimpleDivisions
+    default: op
+  simpledivisions.updatetop:
+    description: Updatetop command of SimpleDivisions
+    default: op
+  simpledivisions.top:
+    description: Top command of SimpleDivisions
+    default: op
+  simpledivisions.info:
+    description: Info command of SimpleDivisions
+    default: op
