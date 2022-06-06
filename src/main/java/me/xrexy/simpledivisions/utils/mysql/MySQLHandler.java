@@ -1,5 +1,6 @@
 package me.xrexy.simpledivisions.utils.mysql;
 
+import lombok.Getter;
 import me.xrexy.simpledivisions.SimpleDivisions;
 import me.xrexy.simpledivisions.players.DivPlayer;
 import me.xrexy.simpledivisions.utils.SerializableUtils;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 import java.util.logging.Level;
 
+@Getter
 public class MySQLHandler {
     private final SimpleDivisions plugin = SimpleDivisions.getInstance();
     private final FileConfiguration config = plugin.getConfig();
@@ -176,37 +178,5 @@ public class MySQLHandler {
         } catch (Exception e) {
             Utils.log(Level.SEVERE, prefix + "An error occurred while closing the connection");
         }
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getDbName() {
-        return dbName;
-    }
-
-    public String getDbAddress() {
-        return dbAddress;
-    }
-
-    public String getDbPort() {
-        return dbPort;
-    }
-
-    public String getDbSSL() {
-        return dbSSL;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public Connection getConnection() {
-        return connection;
     }
 }

@@ -18,14 +18,14 @@ import java.util.HashMap;
 
 public class InventoryHandler implements Listener {
     private final SimpleDivisions plugin = SimpleDivisions.getInstance();
-    private final FileConfiguration config = plugin.getConfig();
     private final PlayerAPI playerAPI = plugin.getPlayerAPI();
-    private static final FileConfiguration configStatic = SimpleDivisions.getInstance().getConfig();
+    private static final FileConfiguration config = SimpleDivisions.getInstance().getConfig();
     private static final HashMap<Integer, Division> mappedDivision = new HashMap<>();
 
     @EventHandler
     void click(InventoryClickEvent e) {
-        Inventory inventory = e.getClickedInventory();
+        final Inventory inventory = e.getClickedInventory();
+        final FileConfiguration config = plugin.getConfig();
         if (inventory != null && e.getView().getTitle().equals(Utils.colorize(config.getString("rewards.gui.title")))) {
             e.setCancelled(true);
             Player clickedPlayer = (Player) e.getWhoClicked();
@@ -54,15 +54,15 @@ public class InventoryHandler implements Listener {
     }
 
     public static ItemStack getClaimedItem() {
-        return loadGlass(configStatic.getString("rewards.gui.claimed"));
+        return loadGlass(config.getString("rewards.gui.claimed"));
     }
 
     public static ItemStack getAvailableItem() {
-        return loadGlass(configStatic.getString("rewards.gui.available"));
+        return loadGlass(config.getString("rewards.gui.available"));
     }
 
     public static ItemStack getNotReachedItem() {
-        return loadGlass(configStatic.getString("rewards.gui.not-reached"));
+        return loadGlass(config.getString("rewards.gui.not-reached"));
     }
 
     public static ItemStack loadGlass(String input) {

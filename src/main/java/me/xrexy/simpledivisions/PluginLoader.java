@@ -60,28 +60,28 @@ public class PluginLoader {
 
         divisionsCommandManager.register(divisionsCommand.getCommand(), divisionsCommand);
 
-        ArgCheck check = new ArgCheck();
+        final ArgCheck check = new ArgCheck();
         divisionsCommandManager.register(check.getCommand(), check);
 
-        ArgBal bal = new ArgBal();
+        final ArgBal bal = new ArgBal();
         divisionsCommandManager.register(bal.getCommand(), bal);
 
-        ArgGive give = new ArgGive();
+        final ArgGive give = new ArgGive();
         divisionsCommandManager.register(give.getCommand(), give);
 
-        ArgReset reset = new ArgReset();
+        final ArgReset reset = new ArgReset();
         divisionsCommandManager.register(reset.getCommand(), reset);
 
-        ArgRewards rewards = new ArgRewards();
+        final ArgRewards rewards = new ArgRewards();
         divisionsCommandManager.register(rewards.getCommand(), rewards);
 
-        ArgTop top = new ArgTop();
+        final ArgTop top = new ArgTop();
         divisionsCommandManager.register(top.getCommand(), top);
 
-        ArgUpdatetop updatetop = new ArgUpdatetop();
+        final ArgUpdatetop updatetop = new ArgUpdatetop();
         divisionsCommandManager.register(updatetop.getCommand(), updatetop);
 
-        ArgInfo info = new ArgInfo();
+        final ArgInfo info = new ArgInfo();
         divisionsCommandManager.register(info.getCommand(), info);
 
         divisionsCommandManager.registerTabCompleters();
