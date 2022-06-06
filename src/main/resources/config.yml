@@ -5,17 +5,15 @@ kill_xp: 5
 death_penalty: 10
 
 mysql:
-  username: "u343_2qQGtUU2ij"
-  password: "3lfCC2EVj.=ntqH+.MvEz0q."
-  database-name: s343_bgcraft
+  username: "customer_288797_bountydb"
+  password: "eY7#TkOSD51FctT!m#Yj"
+  database-name: "customer_288797_bountydb"
   top-count: 10
   top-timer: 3600 # seconds
   server:
     SSL: false
     port: 3306
-    address: 87.121.82.37
-
-# placeholders: %prefix% %score% %division% %player%
+    address: "eu01-sql.pebblehost.com"
 
 rewards:
   gui:
@@ -46,33 +44,33 @@ messages:
     - " "
   info:
     - "&7&l&m-==&r &8[ &c&lDivisions Info&8 ] &7&l&m==-"
-    - "&f/dv me &8- &7показва колко точки имате и коя дивизия сте."
-    - "&f/dv check <player> &8- &7показва колко точки и коя дивизия е посоченият от Вас играч."
-    - "&f/dv rewards &8- &7награди, които може да вземете, когато сте съответната дивизия."
-    - "&f/dv top &8- &7за да видите ТОП 10 играчи.'"
+    - "&f/dv me &8- &7Check your division statistics."
+    - "&f/dv check <player> &8- &7Check players' statistics."
+    - "&f/dv rewards &8- &7View all division rewards."
+    - "&f/dv top &8- &7View the top 10 players."
     - " "
-    - "&7Когато &fубиете &7играч, получавате &a5 &7точки, а когато &fумрете&7, губите &c10 &7точки."
-    - "&7Точки се губят, когато умрете на &fPvP."
-    - "&7Не се губят, когато умрете от &cлава&7, &9вода&7 и т.н"
+    - "&7Upon &fkilling &7a player, &fyou &7will receive &a5 &7XP."
+    - "&7Upon &fdeath &7you will lose &c10 &7XP."
+    - "&7Points are lost only if killed by a player."
     - " "
-  top-player-format: "&r &8[&7%place%.&8] &f&l%username% &7&l- &f%score% points"
-  no-permission: "%prefix% &cНямате достъп до тази команда."
-  invalid-args: "%prefix% &cПроверете дали командата е изписана правилно!"
-  invalid-player: "%prefix% &cНе е намерен потребителя."
+  top-player-format: "&r &8[&7%place%&8] &f&l%username% &7&l- &f%score% points"
+  no-permission: "%prefix% &cInsufficient permissions."
+  invalid-args: "%prefix% &cCheck your spelling and try again!"
+  invalid-player: "%prefix% &cUser not found."
   gui-error: "%prefix% &cGUI is not loaded correctly, please contact an admin"
   unknown-division: ""
-  status-available: "&aИмате достъп до тази награда"
-  status-not-reached: "&cНямате достъп до тази награда"
-  status-claimed: "&eНаградата е вече взета"
-  updatetop: "%prefix% &aУспешно е обновен топ листът!"
+  status-available: "&aClaimable"
+  status-not-reached: "&cUnreached"
+  status-claimed: "&eClaimed"
+  updatetop: "%prefix% &aTop list successfully updated!"
 
-  rankup: "%prefix% &7Току-що покачихте дивизия: &r%division%"
-  rankdown: "%prefix% &7Току-що паднахте дивизия: &r%division%"
-  check: "%prefix% &f%target% &7е дивизия %division% с &a%score% &7точки."
-  me: "%prefix% &7Вие имате &a%score% &7точки и сте дивизия: &r%division%"
-  reset: "%prefix% &7Успешно изтрихте данните на &a%target%!"
-  give: # \/ Unique placeholders: %added%, %sender%
-    invalid-number: "%prefix% &7Моля въведете валидно число!"
-    msg: "%prefix% &7Успешно добавихте &a%added% &7точки към баланса на &a%target%&7. &8(%score% общо)"
+  rankup: "%prefix% &f&lRANK-UP! &7You are now: &r%division%"
+  rankdown: "%prefix% &f&lRANK-DOWN! &7You are now: &r%division%"
+  check: "%prefix% &f%target% &7is %division% with &a%score% &7points."
+  me: "%prefix% &7You have &a%score% &7points and are division: &r%division%"
+  reset: "%prefix% &7Successfully wiped &a%target%&7's data!"
+  give:
+    invalid-number: "%prefix% &7Invalid number!"
+    msg: "%prefix% &7Successfully gave &a%added% &7points to &a%target%&7. &8(%score% total)"
     notify-toggle: true
-    notify: "%prefix% &7Бяха добавени &a%added% &7точки към вашият баланс, сега сте дивизия: &e%division%"
+    notify: "%prefix% &7You received &a%added% &7points and are now: &e%division%"

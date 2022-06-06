@@ -7,8 +7,7 @@ commands:
   division:
     description: Main command of SimpleDivisions
     usage: /<command>
-    aliases:
-      - dv
+    aliases: [ div ]
 
 permissions:
   simpledivisions.*:
@@ -24,29 +23,29 @@ permissions:
       - simpledivisions.top
       - simpledivisions.info
   simpledivisions.use:
-    description: Main command of SimpleDivisions
+    description: Use of the division command
     default: op
   simpledivisions.me:
-    description: Me command of SimpleDivisions
+    description: Allows player to view their own statistics
     default: op
   simpledivisions.check:
-    description: Check command of SimpleDivisions
+    description: Allows player to check other players statistics
     default: op
   simpledivisions.give:
-    description: Give command of SimpleDivisions
+    description: Allows admins to give other players points
     default: op
   simpledivisions.reset:
-    description: Reset command of SimpleDivisions
+    description: Allows admins to reset other players statistics
     default: op
   simpledivisions.rewards:
-    description: Rewards command of SimpleDivisions
+    description: Allows player to view their own rewards
     default: op
   simpledivisions.updatetop:
-    description: Updatetop command of SimpleDivisions
+    description: Allows admins to update the top list
     default: op
   simpledivisions.top:
-    description: Top command of SimpleDivisions
+    description: Allows player to view the top list
     default: op
   simpledivisions.info:
-    description: Info command of SimpleDivisions
+    description: Allows player to view the plugin information
     default: op

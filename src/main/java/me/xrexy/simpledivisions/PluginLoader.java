@@ -39,9 +39,7 @@ public class PluginLoader {
         PlayerAPI.killXP = plugin.getConfig().getInt("kill_xp");
         PlayerAPI.deathPenalty = plugin.getConfig().getInt("death_penalty");
 
-        Bukkit.getOnlinePlayers().forEach(player -> {
-            plugin.getPlayerAPI().savePlayer(plugin.getSqlHandler().loadPlayer(player));
-        });
+        Bukkit.getOnlinePlayers().forEach(player -> plugin.getPlayerAPI().savePlayer(plugin.getSqlHandler().loadPlayer(player)));
 
         plugin.getSqlHandler().updateTopPlayersAndStartTimer();
     }
@@ -85,6 +83,8 @@ public class PluginLoader {
 
         ArgInfo info = new ArgInfo();
         divisionsCommandManager.register(info.getCommand(), info);
+
+        divisionsCommandManager.registerTabCompleters();
     }
 
     void loadFiles() {

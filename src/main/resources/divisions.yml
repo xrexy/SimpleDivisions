@@ -2,340 +2,78 @@ divisions:
   default:
     display_chat: ""
     display: "&7Unranked"
-    score: -1
+    score: -1 # -1 = unranked
     gui:
       show: false
       slot: "%index%"
       title: "&7Unranked"
       description:
         - " "
-  "&dElf V":
+  "&dElf":
     display_chat: "&8[&dElf&8]&7="
     score: 50
     rewards:
       - "eco give %player% 10000"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:4},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 310 1 0 {ench:[{id:0,lvl:3},{id:34,lvl:3}]}"
-      - "give %player% 311 1 0 {ench:[{id:0,lvl:3},{id:34,lvl:3}]}"
-      - "give %player% 312 1 0 {ench:[{id:0,lvl:3},{id:34,lvl:3}]}"
-      - "give %player% 313 1 0 {ench:[{id:0,lvl:3},{id:34,lvl:3}]}"
-      - "give %player% 322 10"
     gui:
       show: true
-      title: "&dElf V"
+      title: "&dElf"
       slot: 2
       description:
         - " "
         - "%status%"
-  "&dElf IV":
-    display_chat: "&8[&dElf&8]&7="
-    score: 100
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&dElf"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&dElf III":
-    display_chat: "&8[&dElf&8]&7="
-    score: 150
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&dElf"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&dElf II":
-    display_chat: "&8[&dElf&8]&7="
-    score: 200
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&dElf"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&dElf I":
-    display_chat: "&8[&dElf&8]&7="
-    score: 250
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&dElf"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-
-  "&ePixie V":
+  "&ePixie":
     display_chat: "&8[&ePixie&8]&7="
     score: 350
     rewards:
       - "eco give %player% 30000"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322 16"
     gui:
       show: true
-      title: "&ePixie V"
+      title: "&ePixie"
       slot: 4
       description:
         - " "
         - "%status%"
-  "&ePixie IV":
-    display_chat: "&8[&ePixie&8]&7="
-    score: 450
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&ePixie"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&ePixie III":
-    display_chat: "&8[&ePixie&8]&7="
-    score: 550
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&ePixie"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&ePixie II":
-    display_chat: "&8[&ePixie&8]&7="
-    score: 650
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&ePixie"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&ePixie I":
-    display_chat: "&8[&ePixie&8]&7="
-    score: 750
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&ePixie"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-
-  "&2Goblin V":
+  "&2Goblin":
     display_chat: "&8[&2Goblin&8]&7="
     score: 900
     rewards:
       - "eco give %player% 50000"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322:1 1"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322 64"
     gui:
       show: true
-      title: "&2Goblin V"
+      title: "&2Goblin"
       slot: 6
       description:
         - " "
         - "%status%"
-  "&2Goblin IV":
-    display_chat: "&8[&2Goblin&8]&7="
-    score: 1050
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&2Goblin"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&2Goblin III":
-    display_chat: "&8[&2Goblin&8]&7="
-    score: 1200
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&2Goblin"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&2Goblin II":
-    display_chat: "&8[&2Goblin&8]&7="
-    score: 1350
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&2Goblin"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&2Goblin I":
-    display_chat: "&8[&2Goblin&8]&7="
-    score: 1500
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&2Goblin"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-
-  "&7Orc IV":
+  "&7Orc":
     display_chat: "&8[&7Orc&8]&7="
     score: 1800
     rewards:
       - "eco give %player% 100000"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322 64"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322 64"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322:1 3"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
     gui:
       show: true
-      title: "&7Orc IV"
+      title: "&7Orc"
       slot: 21
       description:
         - " "
         - "%status%"
-  "&7Orc III":
-    display_chat: "&8[&7Orc&8]&7="
-    score: 2000
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&7Orc"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&7Orc II":
-    display_chat: "&8[&7Orc&8]&7="
-    score: 2500
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&7Orc"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&7Orc I":
-    display_chat: "&8[&7Orc&8]&7="
-    score: 3000
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&7Orc"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-
-  "&9Giant III":
+  "&9Giant":
     display_chat: "&8[&9Giant&8]&7="
     score: 4000
     rewards:
       - "eco give %player% 350000"
-      - "kit prot4_dummy %player%"
-      - "give %player% 322 64"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "give %player% 322:1 5"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "give %player% 279 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
     gui:
       show: true
-      title: "&9Giant III"
+      title: "&9Giant"
       slot: 23
       description:
         - " "
         - "%status%"
-  "&9Giant II":
-    display_chat: "&8[&9Giant&8]&7="
-    score: 4750
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&9Giant"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-  "&9Giant I":
-    display_chat: "&8[&9Giant&8]&7="
-    score: 5500
-    rewards:
-      - ""
-    gui:
-      show: false
-      title: "&9Giant"
-      slot: "%index%"
-      description:
-        - " "
-        - "%status%"
-
   "&cWizard":
     display_chat: "&8[&cWizard&8]&7="
     score: 7500
     rewards:
       - "eco give %player% 600000"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "kit prot4_dummy %player%"
-      - "give %player% 276 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 279 1 0 {ench:[{id:16,lvl:5},{id:34,lvl:3},{id:20,lvl:2}]}"
-      - "give %player% 322 64"
-      - "give %player% 322:1 10"
     gui:
       show: true
       title: "&cWizard"
