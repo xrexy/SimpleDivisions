@@ -25,12 +25,14 @@ public class ArgRewards implements CommandInterface {
     private final PlayerAPI playerAPI = plugin.getPlayerAPI();
     private final FileConfiguration config = plugin.getConfig();
 
+    private String title;
     private Inventory inventoryTemplate = null;
 
     public ArgRewards() {
         try {
             int size = plugin.getConfig().getInt("rewards.gui.size");
-            inventoryTemplate = Bukkit.createInventory(null, size, Utils.colorize(config.getString("rewards.gui.title")));
+            title = Utils.colorize(config.getString("rewards.gui.title"));
+            inventoryTemplate = Bukkit.createInventory(null, size, title);
 
             ItemStack item;
             ItemMeta meta;
@@ -65,7 +67,8 @@ public class ArgRewards implements CommandInterface {
                 Utils.sendMessage(player, "message.gui-error");
                 return true;
             }
-            Inventory inventory = Bukkit.createInventory(player, inventoryTemplate.getSize(), inventoryTemplate.getTitle());
+
+            final Inventory inventory = Bukkit.createInventory(player, inventoryTemplate.getSize(), title);
             inventory.setContents(inventoryTemplate.getContents());
 
             // to-claim > maxDivision is bigger than divisionID and is not in claimed

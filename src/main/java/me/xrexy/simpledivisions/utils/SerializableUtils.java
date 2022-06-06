@@ -25,15 +25,17 @@ public class SerializableUtils {
      *
      * @param s String to deserialize from
      * @return Deserialized object from string
+     * @param <T> Type of object to deserialize
      * @throws IOException            If an I/O error occurs while reading stream header
      * @throws ClassNotFoundException Class of a serialized object cannot be found.
      */
-    public static Object fromString(String s) throws ClassNotFoundException, IOException {
+    @SuppressWarnings("unchecked")
+    public static <T> T fromString(String s) throws ClassNotFoundException, IOException {
         byte[] data = Base64.getDecoder().decode(s);
         ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));
+
         Object o = ois.readObject();
         ois.close();
-        return o;
+        return (T) o;
     }
-    // i hate my life
 }

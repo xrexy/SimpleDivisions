@@ -79,12 +79,12 @@ public class MySQLHandler {
             Utils.log(Level.WARNING, "Couldn't update top players! Retrying after " + delaySeconds + " seconds.");
         }
 
-         Bukkit.getScheduler().runTaskLater(plugin, new BukkitRunnable() {
+        new BukkitRunnable() {
             @Override
             public void run() {
                 updateTopPlayersAndStartTimer();
             }
-        }, delaySeconds).getTaskId();
+        }.runTaskLater(plugin, delaySeconds);
     }
 
     public DivPlayerDummy[] getTopPlayers() {
@@ -142,8 +142,8 @@ public class MySQLHandler {
 
             ResultSet result = stmt.executeQuery();
             ArrayList<Integer> claimed;
-            while (result.next()) {
-                claimed = (ArrayList<Integer>) SerializableUtils.fromString(result.getString("claimed"));
+            if (result.next()) {
+                claimed = SerializableUtils.fromString(result.getString("claimed"));
                 return new DivPlayer(result.getInt("divisionID"), result.getString("username"), result.getInt("score"), uuid.toString(), result.getInt("maxDivision"), claimed); // returns first one it finds, would be one anyways since uuid is unique
             }
         } catch (Exception e) {

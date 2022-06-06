@@ -21,8 +21,8 @@ public class PlayerAPI {
         DivPlayer output = onlinePlayers.get(player.getUniqueId().toString());
         if(output == null) { // not saved as online player
             output = sqlHandler.loadPlayer(player); // loads from database
-            if(output == null) { // jesus fucking christ... how did we get here (player isnt in database too??)
-                // adding the player to the db.
+            if(output == null) { // jesus christ... how did we get here (player isn't in database too??)
+                // adding the player to the db...
                 output = new DivPlayer(0, player.getName(), 0, player.getUniqueId().toString(), 0, new ArrayList<>());
                 sqlHandler.savePlayerInDatabase(output);
                 onlinePlayers.put(player.getUniqueId().toString(), output);

@@ -26,7 +26,7 @@ public class InventoryHandler implements Listener {
     @EventHandler
     void click(InventoryClickEvent e) {
         Inventory inventory = e.getClickedInventory();
-        if (inventory != null && inventory.getTitle().equals(Utils.colorize(config.getString("rewards.gui.title")))) {
+        if (inventory != null && e.getView().getTitle().equals(Utils.colorize(config.getString("rewards.gui.title")))) {
             e.setCancelled(true);
             Player clickedPlayer = (Player) e.getWhoClicked();
             DivPlayer player = playerAPI.getPlayer(clickedPlayer);
